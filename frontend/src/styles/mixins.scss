@@ -1,0 +1,14 @@
+@mixin fluid-container {
+    @media (max-width: $breakpoint-mobile) {
+        padding-left: $grid-base;
+        padding-right: $grid-base;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        max-width: $content-width-lg;
+        padding-left: $grid-base * 2;
+        padding-right: $grid-base * 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

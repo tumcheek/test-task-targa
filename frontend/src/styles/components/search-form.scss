@@ -1,0 +1,10 @@
+@media (min-width: $breakpoint-desktop) {
+    .site-form.search {
+        width: 30%;
+        min-width: 400px;
+
+        .site-form_button {
+            min-width: $grid-base * 2;
+        }
+    }
+}

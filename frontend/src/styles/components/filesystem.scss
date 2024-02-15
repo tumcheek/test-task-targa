@@ -1,0 +1,22 @@
+.filesystem {
+    @include fluid-container;
+
+    padding-top: $grid-base;
+    padding-bottom: $grid-base;
+
+    &,
+    &_actions {
+        display: flex;
+        flex-direction: column;
+        row-gap: $grid-base * 2;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .filesystem {
+        &_actions {
+            width: 30%;
+            min-width: 400px;
+        }
+    }
+}

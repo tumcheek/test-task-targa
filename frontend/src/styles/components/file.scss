@@ -1,0 +1,12 @@
+.file {
+    &_content {
+        display: flex;
+        flex-direction: column;
+        row-gap: $grid-base;
+
+        &_update-btn {
+            @extend .site-form_button;
+            width: 128px;
+        }
+    }
+}

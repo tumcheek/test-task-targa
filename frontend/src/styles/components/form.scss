@@ -1,0 +1,74 @@
+.site-form {
+    display: flex;
+    gap: calc($grid-base / 2);
+    
+    &_input {
+        background-color: $color-brand-white;
+        padding: calc($grid-base / 4) calc($grid-base / 2);
+        color: $color-brand-dark;
+        flex: 1 0 auto;
+
+        &:focus {
+            outline: 1px solid $color-brand-button;
+        }
+    }
+
+    &_button {
+        color: $color-brand-button;
+        cursor: pointer;
+        height: $grid-base * 2;
+        border-radius: 4px;
+        flex: 0 1 auto;
+        font-size: .9em;
+
+        &:hover {
+            color: $color-brand-dark;
+            background-color: $color-brand-button;
+        }
+
+        &.fas {
+            &:before {
+                font-size: 18px;
+            }
+        }
+
+        &:not(.fas) {
+            border: 1px solid $color-brand-button;
+            padding: 0 $grid-base;
+
+        }
+
+    }
+
+    &_input,
+    &_button {
+        border-radius: 4px;
+    }
+
+    &_input.text,
+    &_button {
+        box-sizing: border-box;
+    }
+
+    &_input.textarea {
+        height: $grid-base * 4;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .site-form {
+        &_input.text,
+        &_button {
+            height: 28px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .site-form {
+        &_input.text,
+        &_button {
+            height: $grid-base * 2;
+        }
+    }
+}
